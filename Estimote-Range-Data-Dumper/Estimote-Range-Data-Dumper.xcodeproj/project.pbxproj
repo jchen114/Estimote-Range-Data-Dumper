@@ -1,0 +1,545 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9F0011531A96A299005FABBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0011521A96A299005FABBF /* AppDelegate.swift */; };
+		9F0011561A96A299005FABBF /* Estimote_Range_Data_Dumper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9F0011541A96A299005FABBF /* Estimote_Range_Data_Dumper.xcdatamodeld */; };
+		9F00115B1A96A299005FABBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F0011591A96A299005FABBF /* Main.storyboard */; };
+		9F00115D1A96A299005FABBF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F00115C1A96A299005FABBF /* Images.xcassets */; };
+		9F0011601A96A299005FABBF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F00115E1A96A299005FABBF /* LaunchScreen.xib */; };
+		9F00116C1A96A299005FABBF /* Estimote_Range_Data_DumperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F00116B1A96A299005FABBF /* Estimote_Range_Data_DumperTests.swift */; };
+		9F0011761A96A2E3005FABBF /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 9F0011751A96A2E3005FABBF /* Podfile */; };
+		9F3C22161A97B65F0018C873 /* RangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3C22151A97B65F0018C873 /* RangeViewController.swift */; };
+		9F3C22191A97D8A90018C873 /* CLBeaconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3C22181A97D8A80018C873 /* CLBeaconManager.swift */; };
+		9FCB1BEB1A96F87100A70CBB /* RangeDataFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCB1BEA1A96F87100A70CBB /* RangeDataFileManager.swift */; };
+		9FCB1BEF1A96F8E000A70CBB /* EstimoteBeaconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCB1BEE1A96F8E000A70CBB /* EstimoteBeaconManager.swift */; };
+		C6634CD6385EFD41363F82AF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EDF07D606D2F615282FAB8 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9F0011661A96A299005FABBF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F0011451A96A299005FABBF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F00114C1A96A299005FABBF;
+			remoteInfo = "Estimote-Range-Data-Dumper";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0D732C4BBDF318D53D33212D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		60600887334573583FD89099 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		9F00114D1A96A299005FABBF /* Estimote-Range-Data-Dumper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Estimote-Range-Data-Dumper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F0011511A96A299005FABBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F0011521A96A299005FABBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9F0011551A96A299005FABBF /* Estimote_Range_Data_Dumper.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Estimote_Range_Data_Dumper.xcdatamodel; sourceTree = "<group>"; };
+		9F00115A1A96A299005FABBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9F00115C1A96A299005FABBF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9F00115F1A96A299005FABBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		9F0011651A96A299005FABBF /* Estimote-Range-Data-DumperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Estimote-Range-Data-DumperTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F00116A1A96A299005FABBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F00116B1A96A299005FABBF /* Estimote_Range_Data_DumperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Estimote_Range_Data_DumperTests.swift; sourceTree = "<group>"; };
+		9F0011751A96A2E3005FABBF /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		9F0011791A96A729005FABBF /* Estimote-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Estimote-Bridging-Header.h"; sourceTree = "<group>"; };
+		9F3C22151A97B65F0018C873 /* RangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RangeViewController.swift; path = "Estimote-Range-Data-Dumper/RangeController/RangeViewController.swift"; sourceTree = "<group>"; };
+		9F3C22181A97D8A80018C873 /* CLBeaconManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CLBeaconManager.swift; path = BeaconManager/CLBeaconManager.swift; sourceTree = "<group>"; };
+		9FCB1BEA1A96F87100A70CBB /* RangeDataFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RangeDataFileManager.swift; path = FileManager/RangeDataFileManager.swift; sourceTree = "<group>"; };
+		9FCB1BEE1A96F8E000A70CBB /* EstimoteBeaconManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EstimoteBeaconManager.swift; path = BeaconManager/EstimoteBeaconManager.swift; sourceTree = "<group>"; };
+		D3EDF07D606D2F615282FAB8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9F00114A1A96A299005FABBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6634CD6385EFD41363F82AF /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F0011621A96A299005FABBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3926A36CF28F59FDC7E0F65E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3EDF07D606D2F615282FAB8 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7D3C51805D52360B57ED9F47 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				60600887334573583FD89099 /* Pods.debug.xcconfig */,
+				0D732C4BBDF318D53D33212D /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9F0011441A96A299005FABBF = {
+			isa = PBXGroup;
+			children = (
+				9F0011751A96A2E3005FABBF /* Podfile */,
+				9F00114F1A96A299005FABBF /* Estimote-Range-Data-Dumper */,
+				9F0011681A96A299005FABBF /* Estimote-Range-Data-DumperTests */,
+				9F00114E1A96A299005FABBF /* Products */,
+				7D3C51805D52360B57ED9F47 /* Pods */,
+				3926A36CF28F59FDC7E0F65E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9F00114E1A96A299005FABBF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9F00114D1A96A299005FABBF /* Estimote-Range-Data-Dumper.app */,
+				9F0011651A96A299005FABBF /* Estimote-Range-Data-DumperTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9F00114F1A96A299005FABBF /* Estimote-Range-Data-Dumper */ = {
+			isa = PBXGroup;
+			children = (
+				9F3C22171A97B6660018C873 /* Range-Controller */,
+				9FCB1BED1A96F88600A70CBB /* Beacon-Manager */,
+				9FCB1BEC1A96F87A00A70CBB /* File-Manager */,
+				9F0011521A96A299005FABBF /* AppDelegate.swift */,
+				9F0011591A96A299005FABBF /* Main.storyboard */,
+				9F00115C1A96A299005FABBF /* Images.xcassets */,
+				9F00115E1A96A299005FABBF /* LaunchScreen.xib */,
+				9F0011541A96A299005FABBF /* Estimote_Range_Data_Dumper.xcdatamodeld */,
+				9F0011501A96A299005FABBF /* Supporting Files */,
+			);
+			path = "Estimote-Range-Data-Dumper";
+			sourceTree = "<group>";
+		};
+		9F0011501A96A299005FABBF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9F0011791A96A729005FABBF /* Estimote-Bridging-Header.h */,
+				9F0011511A96A299005FABBF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9F0011681A96A299005FABBF /* Estimote-Range-Data-DumperTests */ = {
+			isa = PBXGroup;
+			children = (
+				9F00116B1A96A299005FABBF /* Estimote_Range_Data_DumperTests.swift */,
+				9F0011691A96A299005FABBF /* Supporting Files */,
+			);
+			path = "Estimote-Range-Data-DumperTests";
+			sourceTree = "<group>";
+		};
+		9F0011691A96A299005FABBF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9F00116A1A96A299005FABBF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9F3C22171A97B6660018C873 /* Range-Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9F3C22151A97B65F0018C873 /* RangeViewController.swift */,
+			);
+			name = "Range-Controller";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		9FCB1BEC1A96F87A00A70CBB /* File-Manager */ = {
+			isa = PBXGroup;
+			children = (
+				9FCB1BEA1A96F87100A70CBB /* RangeDataFileManager.swift */,
+			);
+			name = "File-Manager";
+			sourceTree = "<group>";
+		};
+		9FCB1BED1A96F88600A70CBB /* Beacon-Manager */ = {
+			isa = PBXGroup;
+			children = (
+				9FCB1BEE1A96F8E000A70CBB /* EstimoteBeaconManager.swift */,
+				9F3C22181A97D8A80018C873 /* CLBeaconManager.swift */,
+			);
+			name = "Beacon-Manager";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9F00114C1A96A299005FABBF /* Estimote-Range-Data-Dumper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F00116F1A96A299005FABBF /* Build configuration list for PBXNativeTarget "Estimote-Range-Data-Dumper" */;
+			buildPhases = (
+				A15CD756FB39DB2C0382B772 /* Check Pods Manifest.lock */,
+				9F0011491A96A299005FABBF /* Sources */,
+				9F00114A1A96A299005FABBF /* Frameworks */,
+				9F00114B1A96A299005FABBF /* Resources */,
+				DA634BFA72B804D99C8A075B /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Estimote-Range-Data-Dumper";
+			productName = "Estimote-Range-Data-Dumper";
+			productReference = 9F00114D1A96A299005FABBF /* Estimote-Range-Data-Dumper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9F0011641A96A299005FABBF /* Estimote-Range-Data-DumperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F0011721A96A299005FABBF /* Build configuration list for PBXNativeTarget "Estimote-Range-Data-DumperTests" */;
+			buildPhases = (
+				9F0011611A96A299005FABBF /* Sources */,
+				9F0011621A96A299005FABBF /* Frameworks */,
+				9F0011631A96A299005FABBF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F0011671A96A299005FABBF /* PBXTargetDependency */,
+			);
+			name = "Estimote-Range-Data-DumperTests";
+			productName = "Estimote-Range-Data-DumperTests";
+			productReference = 9F0011651A96A299005FABBF /* Estimote-Range-Data-DumperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9F0011451A96A299005FABBF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Looped LLC";
+				TargetAttributes = {
+					9F00114C1A96A299005FABBF = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					9F0011641A96A299005FABBF = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 9F00114C1A96A299005FABBF;
+					};
+				};
+			};
+			buildConfigurationList = 9F0011481A96A299005FABBF /* Build configuration list for PBXProject "Estimote-Range-Data-Dumper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9F0011441A96A299005FABBF;
+			productRefGroup = 9F00114E1A96A299005FABBF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9F00114C1A96A299005FABBF /* Estimote-Range-Data-Dumper */,
+				9F0011641A96A299005FABBF /* Estimote-Range-Data-DumperTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9F00114B1A96A299005FABBF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F00115B1A96A299005FABBF /* Main.storyboard in Resources */,
+				9F0011601A96A299005FABBF /* LaunchScreen.xib in Resources */,
+				9F0011761A96A2E3005FABBF /* Podfile in Resources */,
+				9F00115D1A96A299005FABBF /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F0011631A96A299005FABBF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A15CD756FB39DB2C0382B772 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DA634BFA72B804D99C8A075B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9F0011491A96A299005FABBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F3C22191A97D8A90018C873 /* CLBeaconManager.swift in Sources */,
+				9FCB1BEF1A96F8E000A70CBB /* EstimoteBeaconManager.swift in Sources */,
+				9F3C22161A97B65F0018C873 /* RangeViewController.swift in Sources */,
+				9F0011561A96A299005FABBF /* Estimote_Range_Data_Dumper.xcdatamodeld in Sources */,
+				9F0011531A96A299005FABBF /* AppDelegate.swift in Sources */,
+				9FCB1BEB1A96F87100A70CBB /* RangeDataFileManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F0011611A96A299005FABBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F00116C1A96A299005FABBF /* Estimote_Range_Data_DumperTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9F0011671A96A299005FABBF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F00114C1A96A299005FABBF /* Estimote-Range-Data-Dumper */;
+			targetProxy = 9F0011661A96A299005FABBF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9F0011591A96A299005FABBF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F00115A1A96A299005FABBF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9F00115E1A96A299005FABBF /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F00115F1A96A299005FABBF /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9F00116D1A96A299005FABBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9F00116E1A96A299005FABBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9F0011701A96A299005FABBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60600887334573583FD89099 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Estimote-Range-Data-Dumper/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "./Estimote-Range-Data-Dumper/Estimote-Bridging-Header.h";
+			};
+			name = Debug;
+		};
+		9F0011711A96A299005FABBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D732C4BBDF318D53D33212D /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Estimote-Range-Data-Dumper/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "./Estimote-Range-Data-Dumper/Estimote-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		9F0011731A96A299005FABBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Estimote-Range-Data-DumperTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Estimote-Range-Data-Dumper.app/Estimote-Range-Data-Dumper";
+			};
+			name = Debug;
+		};
+		9F0011741A96A299005FABBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Estimote-Range-Data-DumperTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Estimote-Range-Data-Dumper.app/Estimote-Range-Data-Dumper";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9F0011481A96A299005FABBF /* Build configuration list for PBXProject "Estimote-Range-Data-Dumper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F00116D1A96A299005FABBF /* Debug */,
+				9F00116E1A96A299005FABBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F00116F1A96A299005FABBF /* Build configuration list for PBXNativeTarget "Estimote-Range-Data-Dumper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F0011701A96A299005FABBF /* Debug */,
+				9F0011711A96A299005FABBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F0011721A96A299005FABBF /* Build configuration list for PBXNativeTarget "Estimote-Range-Data-DumperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F0011731A96A299005FABBF /* Debug */,
+				9F0011741A96A299005FABBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9F0011541A96A299005FABBF /* Estimote_Range_Data_Dumper.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9F0011551A96A299005FABBF /* Estimote_Range_Data_Dumper.xcdatamodel */,
+			);
+			currentVersion = 9F0011551A96A299005FABBF /* Estimote_Range_Data_Dumper.xcdatamodel */;
+			path = Estimote_Range_Data_Dumper.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 9F0011451A96A299005FABBF /* Project object */;
+}

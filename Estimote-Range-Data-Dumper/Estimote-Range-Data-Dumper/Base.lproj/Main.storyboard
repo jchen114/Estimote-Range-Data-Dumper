@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Range View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="RangeViewController" customModule="Estimote_Range_Data_Dumper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zTY-Uc-JV2">
+                                <rect key="frame" x="0.0" y="71" width="600" height="162"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="1Na-NZ-R38"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="0ha-lp-BVj"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Range in Feet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QtQ-Sm-bpY">
+                                <rect key="frame" x="164" y="20" width="272" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="272" id="2H2-QV-FAc"/>
+                                    <constraint firstAttribute="height" constant="38" id="n7n-fH-BSU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZB-gB-B0d">
+                                <rect key="frame" x="210" y="344" width="181" height="76"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="181" id="lSe-2y-O0q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="21"/>
+                                <state key="normal" title="Start Measuring">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="measuringButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Wmc-0y-nx4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zTY-Uc-JV2" firstAttribute="centerX" secondItem="QtQ-Sm-bpY" secondAttribute="centerX" id="4Mk-aH-UXN"/>
+                            <constraint firstItem="gZB-gB-B0d" firstAttribute="centerX" secondItem="zTY-Uc-JV2" secondAttribute="centerX" id="GBR-GD-aAs"/>
+                            <constraint firstItem="zTY-Uc-JV2" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Jb4-Fb-pgJ"/>
+                            <constraint firstItem="QtQ-Sm-bpY" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="KRl-x9-Odx"/>
+                            <constraint firstItem="zTY-Uc-JV2" firstAttribute="top" secondItem="QtQ-Sm-bpY" secondAttribute="bottom" constant="13" id="hb4-6I-kbQ"/>
+                            <constraint firstItem="gZB-gB-B0d" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" constant="82" id="pIn-Nx-Yyp"/>
+                            <constraint firstAttribute="trailing" secondItem="zTY-Uc-JV2" secondAttribute="trailing" id="s03-QJ-462"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="gZB-gB-B0d" secondAttribute="bottom" constant="180" id="tvY-qS-Un6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="measuringButton" destination="gZB-gB-B0d" id="KWg-PP-qkY"/>
+                        <outlet property="rangePickerView" destination="zTY-Uc-JV2" id="xtK-Rk-fpK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
