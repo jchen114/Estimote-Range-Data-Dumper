@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>FB7D17AA-8821-4DD7-8011-304A97141733</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Estimote-Range-Data-Dumper</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>263F406011AA1F2CEEF4CF89CB4D1F45943707AC</key>
+		<string>https://github.com/jchen114/Estimote-Range-Data-Dumper.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Estimote-Range-Data-Dumper/Estimote-Range-Data-Dumper.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>263F406011AA1F2CEEF4CF89CB4D1F45943707AC</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jchen114/Estimote-Range-Data-Dumper.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>263F406011AA1F2CEEF4CF89CB4D1F45943707AC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>263F406011AA1F2CEEF4CF89CB4D1F45943707AC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Estimote-Range-Data-Dumper</string>
+		</dict>
+	</array>
+</dict>
+</plist>

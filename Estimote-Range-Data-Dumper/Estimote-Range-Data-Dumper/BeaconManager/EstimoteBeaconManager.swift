@@ -58,6 +58,9 @@ class estBeaconManager : NSObject, ESTBeaconManagerDelegate {
             
             manager.startMonitoringForRegion(beaconRegion)
             manager.startRangingBeaconsInRegion(beaconRegion)
+            
+            startWriting = true
+            fileMgr.openFile(self.range!)
     }
     
     
@@ -82,8 +85,6 @@ class estBeaconManager : NSObject, ESTBeaconManagerDelegate {
         
         for beacon in filteredBeacons {
             println("major: \(beacon.major), rssi: \(beacon.rssi)")
-            startWriting = true
-            fileMgr.openFile(self.range!)
             self.writeRangeToFile(beacon.rssi)
         }
         

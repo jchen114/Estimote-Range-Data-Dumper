@@ -8,20 +8,34 @@
 
 import UIKit
 
-class RangeViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class RangeDataViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet var rangePickerView: UIPickerView!
-    
     @IBOutlet var measuringButton: UIButton!
+    @IBOutlet var rssiReadingLabel: UILabel!
+    @IBOutlet var countLabel: UILabel!
+    
     
     let values:[Int] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
     var measure:Bool = false
+    
+    var dataReaderCount: Int = 0
     
     //let locationManager: CLBeaconManager = CLBeaconManager.sharedBeaconManager
     let locationManager: estBeaconManager = estBeaconManager.sharedBeaconManager
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Notification listeners
+        
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: "changeRSSIReading:",
+            name: NOTIF_UPDATE_RSSI_LABEL,
+            object: nil
+        )
+        
         
     }
     
@@ -67,22 +81,50 @@ class RangeViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             (major:19714, minor:49179)
             */
             // begin measuring and change text to stop measuring
-            locationManager.listenToRegion(
-                majID: 46555,
-                minID: nil,
-                range: values[rangePickerView.selectedRowInComponent(0)]
-            )
-            measuringButton.setTitle("Stop Measuring", forState: UIControlState.Normal)
+            
+            startMeasuring()
             
         } else {
             
-            // stop measuring and change text to start measuring
-            locationManager.stop()
-            measuringButton.setTitle("Start Measuring", forState: UIControlState.Normal)
+            stopMeasuring()
             
         }
+
+    }
+    
+    
+    func startMeasuring() {
+        locationManager.listenToRegion(
+            majID: 46555,
+            minID: nil,
+            range: values[rangePickerView.selectedRowInComponent(0)]
+        )
+        measuringButton.setTitle("Stop Measuring", forState: UIControlState.Normal)
+        dataReaderCount = 0
+        measure = true
+    }
+    
+    func stopMeasuring () {
+        // stop measuring and change text to start measuring
+        locationManager.stop()
+        measuringButton.setTitle("Start Measuring", forState: UIControlState.Normal)
+        measure = false
+    }
+    
+    // MARK: NOTIFICATION METHODS
+    
+    func changeRSSIReading (notification: NSNotification) {
         
-        measure = !measure
+        var rssiReading: String = notification.userInfo![RSSI_KEY] as String
+        
+        self.rssiReadingLabel.text = rssiReading
+        dataReaderCount += 1
+        self.countLabel.text = String(dataReaderCount)
+        
+        if dataReaderCount == 51 {
+            // Stop the reader
+            stopMeasuring()
+        }
         
     }
     

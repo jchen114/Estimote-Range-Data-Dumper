@@ -29,6 +29,9 @@ class RangeDataFileManager: NSObject {
         
         // Make path string
         
+        contentToWrite = ""
+        println("openFile")
+        
         let dir: NSURL = NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.DocumentDirectory, inDomains: NSSearchPathDomainMask.UserDomainMask).last as NSURL
         
         fileurl = dir.URLByAppendingPathComponent("\(range)-ft.txt")
@@ -55,10 +58,22 @@ class RangeDataFileManager: NSObject {
     func write (
         rssiReading: String
         ) {
-            contentToWrite = contentToWrite + "\(rssiReading)\r\n"
+            if (rssiReading != "0") {
+                
+                // Post notification
+                NSNotificationCenter.defaultCenter().postNotificationName(
+                    NOTIF_UPDATE_RSSI_LABEL,
+                    object: nil,
+                    userInfo: [RSSI_KEY: rssiReading]
+                )
+                
+                contentToWrite = contentToWrite + "\(rssiReading) | "
+            }
     }
     
     func close () -> Bool{
+        
+        println(contentToWrite)
         var err:NSError?
         fileHandle = NSFileHandle(forUpdatingURL: self.fileurl!, error: &err)
         

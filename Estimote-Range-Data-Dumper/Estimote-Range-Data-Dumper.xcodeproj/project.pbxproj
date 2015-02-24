@@ -14,8 +14,9 @@
 		9F0011601A96A299005FABBF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F00115E1A96A299005FABBF /* LaunchScreen.xib */; };
 		9F00116C1A96A299005FABBF /* Estimote_Range_Data_DumperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F00116B1A96A299005FABBF /* Estimote_Range_Data_DumperTests.swift */; };
 		9F0011761A96A2E3005FABBF /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 9F0011751A96A2E3005FABBF /* Podfile */; };
-		9F3C22161A97B65F0018C873 /* RangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3C22151A97B65F0018C873 /* RangeViewController.swift */; };
 		9F3C22191A97D8A90018C873 /* CLBeaconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3C22181A97D8A80018C873 /* CLBeaconManager.swift */; };
+		9F62F9171A9BABFD00245191 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F62F9161A9BABFD00245191 /* Constants.swift */; };
+		9F62F9181A9BB08400245191 /* RangeDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F62F9131A9BAB0C00245191 /* RangeDataViewController.swift */; };
 		9FCB1BEB1A96F87100A70CBB /* RangeDataFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCB1BEA1A96F87100A70CBB /* RangeDataFileManager.swift */; };
 		9FCB1BEF1A96F8E000A70CBB /* EstimoteBeaconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCB1BEE1A96F8E000A70CBB /* EstimoteBeaconManager.swift */; };
 		C6634CD6385EFD41363F82AF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EDF07D606D2F615282FAB8 /* libPods.a */; };
@@ -46,8 +47,9 @@
 		9F00116B1A96A299005FABBF /* Estimote_Range_Data_DumperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Estimote_Range_Data_DumperTests.swift; sourceTree = "<group>"; };
 		9F0011751A96A2E3005FABBF /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		9F0011791A96A729005FABBF /* Estimote-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Estimote-Bridging-Header.h"; sourceTree = "<group>"; };
-		9F3C22151A97B65F0018C873 /* RangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RangeViewController.swift; path = "Estimote-Range-Data-Dumper/RangeController/RangeViewController.swift"; sourceTree = "<group>"; };
 		9F3C22181A97D8A80018C873 /* CLBeaconManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CLBeaconManager.swift; path = BeaconManager/CLBeaconManager.swift; sourceTree = "<group>"; };
+		9F62F9131A9BAB0C00245191 /* RangeDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeDataViewController.swift; sourceTree = "<group>"; };
+		9F62F9161A9BABFD00245191 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Utilities/Constants.swift; sourceTree = "<group>"; };
 		9FCB1BEA1A96F87100A70CBB /* RangeDataFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RangeDataFileManager.swift; path = FileManager/RangeDataFileManager.swift; sourceTree = "<group>"; };
 		9FCB1BEE1A96F8E000A70CBB /* EstimoteBeaconManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EstimoteBeaconManager.swift; path = BeaconManager/EstimoteBeaconManager.swift; sourceTree = "<group>"; };
 		D3EDF07D606D2F615282FAB8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +115,7 @@
 		9F00114F1A96A299005FABBF /* Estimote-Range-Data-Dumper */ = {
 			isa = PBXGroup;
 			children = (
+				9F62F9151A9BABE700245191 /* Utilities */,
 				9F3C22171A97B6660018C873 /* Range-Controller */,
 				9FCB1BED1A96F88600A70CBB /* Beacon-Manager */,
 				9FCB1BEC1A96F87A00A70CBB /* File-Manager */,
@@ -155,10 +158,18 @@
 		9F3C22171A97B6660018C873 /* Range-Controller */ = {
 			isa = PBXGroup;
 			children = (
-				9F3C22151A97B65F0018C873 /* RangeViewController.swift */,
+				9F62F9131A9BAB0C00245191 /* RangeDataViewController.swift */,
 			);
 			name = "Range-Controller";
 			path = ..;
+			sourceTree = "<group>";
+		};
+		9F62F9151A9BABE700245191 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				9F62F9161A9BABFD00245191 /* Constants.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 		9FCB1BEC1A96F87A00A70CBB /* File-Manager */ = {
@@ -314,12 +325,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F62F9181A9BB08400245191 /* RangeDataViewController.swift in Sources */,
 				9F3C22191A97D8A90018C873 /* CLBeaconManager.swift in Sources */,
 				9FCB1BEF1A96F8E000A70CBB /* EstimoteBeaconManager.swift in Sources */,
-				9F3C22161A97B65F0018C873 /* RangeViewController.swift in Sources */,
 				9F0011561A96A299005FABBF /* Estimote_Range_Data_Dumper.xcdatamodeld in Sources */,
 				9F0011531A96A299005FABBF /* AppDelegate.swift in Sources */,
 				9FCB1BEB1A96F87100A70CBB /* RangeDataFileManager.swift in Sources */,
+				9F62F9171A9BABFD00245191 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
