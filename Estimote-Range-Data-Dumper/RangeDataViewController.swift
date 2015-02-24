@@ -14,11 +14,12 @@ class RangeDataViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBOutlet var measuringButton: UIButton!
     @IBOutlet var rssiReadingLabel: UILabel!
     @IBOutlet var countLabel: UILabel!
-    
+    @IBOutlet var zoneLabel: UILabel!
+    @IBOutlet var zoningButton: UIButton!
     
     let values:[Int] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
     var measure:Bool = false
-    
+    var zoning:Bool = false
     var dataReaderCount: Int = 0
     
     //let locationManager: CLBeaconManager = CLBeaconManager.sharedBeaconManager
@@ -36,6 +37,12 @@ class RangeDataViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             object: nil
         )
         
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: "updateZoneLabel:",
+            name: NOTIF_UPDATE_ZONE_LABEL,
+            object: nil
+        )
         
     }
     
@@ -91,7 +98,29 @@ class RangeDataViewController: UIViewController, UIPickerViewDelegate, UIPickerV
         }
 
     }
+    @IBAction func displayZonePressed(sender: AnyObject) {
+        
+        if !zoning {
+            startRanging()
+        } else {
+            stopRanging()
+            self.zoningButton.setTitle("Display Zone", forState: UIControlState.Normal)
+        }
+        
+        zoning = !zoning
+    }
     
+    func startRanging() {
+        
+        locationManager.findZoneOfRegion(majID: 46555, minID: nil)
+        self.zoningButton.setTitle("Stop Zoning", forState: UIControlState.Normal)
+        
+    }
+    
+    func stopRanging() {
+        locationManager.stop()
+        self.zoneLabel.text = ""
+    }
     
     func startMeasuring() {
         locationManager.listenToRegion(
@@ -125,6 +154,14 @@ class RangeDataViewController: UIViewController, UIPickerViewDelegate, UIPickerV
             // Stop the reader
             stopMeasuring()
         }
+        
+    }
+    
+    func updateZoneLabel (notification: NSNotification) {
+        
+        var zone: String = notification.userInfo![ZONE_KEY] as String
+        self.zoneLabel.text = zone
+        
         
     }
     

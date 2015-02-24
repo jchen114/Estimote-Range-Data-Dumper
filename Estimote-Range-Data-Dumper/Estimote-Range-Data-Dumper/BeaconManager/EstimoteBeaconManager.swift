@@ -47,10 +47,48 @@ class estBeaconManager : NSObject, ESTBeaconManagerDelegate {
         range: NSNumber
         ) {
             
+            startRanging(
+                regionID: regionID,
+                regionName: regionName,
+                majID: majID,
+                minID: minID,
+                range: range
+            )
+            
+            startWriting = true
+            fileMgr.openFile(self.range!)
+    }
+    
+    func findZoneOfRegion(
+        regionID: NSUUID = DEFAULT_UUID!,
+        regionName: String = "Default Region",
+        majID: NSNumber?,
+        minID: NSNumber?
+        ) {
+            
+            startRanging(
+                regionID: regionID,
+                regionName: regionName,
+                majID: majID,
+                minID: minID,
+                range: nil
+            )
+            
+            startWriting = false
+    }
+    
+    func startRanging(
+        regionID: NSUUID = DEFAULT_UUID!,
+        regionName: String = "Default Region",
+        majID: NSNumber?,
+        minID: NSNumber?,
+        range: NSNumber?) {
+            
             majorID = majID
             minorID = minID
-            self.range = range
-            
+            if range != nil {
+                self.range = range
+            }
             beaconRegion = ESTBeaconRegion(
                 proximityUUID: regionID,
                 identifier: regionName
@@ -58,11 +96,7 @@ class estBeaconManager : NSObject, ESTBeaconManagerDelegate {
             
             manager.startMonitoringForRegion(beaconRegion)
             manager.startRangingBeaconsInRegion(beaconRegion)
-            
-            startWriting = true
-            fileMgr.openFile(self.range!)
     }
-    
     
     func writeRangeToFile(rssi: NSInteger) {
         
@@ -85,7 +119,34 @@ class estBeaconManager : NSObject, ESTBeaconManagerDelegate {
         
         for beacon in filteredBeacons {
             println("major: \(beacon.major), rssi: \(beacon.rssi)")
-            self.writeRangeToFile(beacon.rssi)
+            if startWriting {
+                self.writeRangeToFile(beacon.rssi)
+            }
+            
+            // Display the zone
+            
+            var info:[String: String]
+            
+            switch (beacon.proximity) {
+            case CLProximity.Unknown:
+                info = [ZONE_KEY: "Unknown"]
+                break;
+            case CLProximity.Immediate:
+                info = [ZONE_KEY: "Immediate"]
+                break;
+            case CLProximity.Near:
+                info = [ZONE_KEY: "Near"]
+                break;
+            case CLProximity.Far:
+                info = [ZONE_KEY: "Far"]
+                break;
+                
+            default:
+                break;
+            }
+            
+            NSNotificationCenter.defaultCenter().postNotificationName(NOTIF_UPDATE_ZONE_LABEL, object: nil, userInfo: info)
+            
         }
         
     }
@@ -98,9 +159,10 @@ class estBeaconManager : NSObject, ESTBeaconManagerDelegate {
         
         // Stop listening
         manager.stopRangingBeaconsInRegion(beaconRegion)
-        fileMgr.close()
-        startWriting = false
-        
+        if startWriting {
+            fileMgr.close()
+            startWriting = false
+        }
     }
     
 }

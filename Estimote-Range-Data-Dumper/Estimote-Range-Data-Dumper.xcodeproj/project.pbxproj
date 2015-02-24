@@ -17,6 +17,8 @@
 		9F3C22191A97D8A90018C873 /* CLBeaconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3C22181A97D8A80018C873 /* CLBeaconManager.swift */; };
 		9F62F9171A9BABFD00245191 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F62F9161A9BABFD00245191 /* Constants.swift */; };
 		9F62F9181A9BB08400245191 /* RangeDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F62F9131A9BAB0C00245191 /* RangeDataViewController.swift */; };
+		9F97557E1A9D1C11004D0A28 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F97557D1A9D1C11004D0A28 /* CoreBluetooth.framework */; };
+		9F9755801A9D1C43004D0A28 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F97557F1A9D1C43004D0A28 /* CoreLocation.framework */; };
 		9FCB1BEB1A96F87100A70CBB /* RangeDataFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCB1BEA1A96F87100A70CBB /* RangeDataFileManager.swift */; };
 		9FCB1BEF1A96F8E000A70CBB /* EstimoteBeaconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCB1BEE1A96F8E000A70CBB /* EstimoteBeaconManager.swift */; };
 		C6634CD6385EFD41363F82AF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3EDF07D606D2F615282FAB8 /* libPods.a */; };
@@ -50,6 +52,8 @@
 		9F3C22181A97D8A80018C873 /* CLBeaconManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CLBeaconManager.swift; path = BeaconManager/CLBeaconManager.swift; sourceTree = "<group>"; };
 		9F62F9131A9BAB0C00245191 /* RangeDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeDataViewController.swift; sourceTree = "<group>"; };
 		9F62F9161A9BABFD00245191 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Utilities/Constants.swift; sourceTree = "<group>"; };
+		9F97557D1A9D1C11004D0A28 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		9F97557F1A9D1C43004D0A28 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		9FCB1BEA1A96F87100A70CBB /* RangeDataFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RangeDataFileManager.swift; path = FileManager/RangeDataFileManager.swift; sourceTree = "<group>"; };
 		9FCB1BEE1A96F8E000A70CBB /* EstimoteBeaconManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EstimoteBeaconManager.swift; path = BeaconManager/EstimoteBeaconManager.swift; sourceTree = "<group>"; };
 		D3EDF07D606D2F615282FAB8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F9755801A9D1C43004D0A28 /* CoreLocation.framework in Frameworks */,
+				9F97557E1A9D1C11004D0A28 /* CoreBluetooth.framework in Frameworks */,
 				C6634CD6385EFD41363F82AF /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,6 +83,8 @@
 		3926A36CF28F59FDC7E0F65E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9F97557F1A9D1C43004D0A28 /* CoreLocation.framework */,
+				9F97557D1A9D1C11004D0A28 /* CoreBluetooth.framework */,
 				D3EDF07D606D2F615282FAB8 /* libPods.a */,
 			);
 			name = Frameworks;

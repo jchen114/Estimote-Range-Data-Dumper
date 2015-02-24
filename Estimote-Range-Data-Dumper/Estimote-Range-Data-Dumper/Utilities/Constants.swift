@@ -9,5 +9,8 @@
 import Foundation
 
 public let NOTIF_UPDATE_RSSI_LABEL = "NOTIF_UPDATE_RSSI_LABEL"
+public let NOTIF_UPDATE_ZONE_LABEL = "NOTIF_UPDATE_ZONE_LABEL"
 
 public let RSSI_KEY = "RSSI_KEY"
+
+public let ZONE_KEY = "ZONE_KEY"
